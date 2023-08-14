@@ -1,4 +1,4 @@
-package com.pds.member.controller;
+package com.pds.gateway.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +9,6 @@ public class TestController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "hello member";
+        return "hello gateway";
     }
 }
