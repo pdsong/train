@@ -2,8 +2,10 @@ package com.pds.member.service;
 
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.IdUtil;
 import com.pds.common.exception.BusinessException;
 import com.pds.common.exception.BusinessExceptionEnum;
+import com.pds.common.util.SnowUtil;
 import com.pds.member.domain.Member;
 import com.pds.member.domain.MemberExample;
 import com.pds.member.mapper.MemberMapper;
@@ -37,7 +39,7 @@ public class MemberService {
         }
 
         Member member = new Member();
-        member.setId(System.currentTimeMillis());
+        member.setId(SnowUtil.getSnowflakeNextId());
         member.setMobile(mobile);
         memberMapper.insert(member);
         return member.getId();
