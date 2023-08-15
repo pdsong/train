@@ -2,6 +2,8 @@ package com.pds.member.service;
 
 
 import cn.hutool.core.collection.CollUtil;
+import com.pds.common.exception.BusinessException;
+import com.pds.common.exception.BusinessExceptionEnum;
 import com.pds.member.domain.Member;
 import com.pds.member.domain.MemberExample;
 import com.pds.member.mapper.MemberMapper;
@@ -30,7 +32,8 @@ public class MemberService {
         if (CollUtil.isNotEmpty(list)) {
             //   return list.get(0).getId();
             //   避免抛出改成 RuntimeException
-            throw new RuntimeException("手机号已注册");
+//            throw new RuntimeException("手机号已注册");
+            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_EXIT);
         }
 
         Member member = new Member();
