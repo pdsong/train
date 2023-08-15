@@ -1,7 +1,9 @@
 package com.pds.member.controller;
 
 
+import com.pds.common.resp.CommonResp;
 import com.pds.member.mapper.MemberMapper;
+import com.pds.member.req.MemberRegisterReq;
 import com.pds.member.service.MemberService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,14 +19,17 @@ public class MemberController {
     private MemberService memberService;
 
     @GetMapping("/count")
-    public Integer count() {
-        return memberService.count();
+    public CommonResp<Integer> count() {
+//        return memberService.count();
+        int count = memberService.count();
+        CommonResp<Integer> commonResp = new CommonResp<>();
+        commonResp.setContent(count);
+        return commonResp;
     }
 
     @PostMapping("/register")
-    public Long register(String mobile) {
-
-
-        return memberService.register(mobile);
+    public CommonResp<Long> register(MemberRegisterReq req) {
+        long registerID = memberService.register(req);
+        return new CommonResp<>(registerID);  //CommResp(T content){ this.content=content }
     }
 }
