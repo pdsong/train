@@ -1,7 +1,7 @@
 package com.pds.common.exception;
 
 public enum BusinessExceptionEnum {
-    MEMBER_MOBILE_EXIT("手机号已经注册");
+    MEMBER_MOBILE_EXIT("手机号已经注册!");
     private String desc;
 
     BusinessExceptionEnum(String desc) {
