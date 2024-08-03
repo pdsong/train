@@ -17,8 +17,9 @@ public class MemberApplication {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(MemberApplication.class);
+        // 获取项目运行环境 通过环境获取系统的变量
         Environment env = app.run(args).getEnvironment();
-        LOG.info("启动成功！！");
+        LOG.info("启动成功");
         LOG.info("测试地址: \thttp://127.0.0.1:{}{}/hello", env.getProperty("server.port"), env.getProperty("server.servlet.context-path"));
     }
 }

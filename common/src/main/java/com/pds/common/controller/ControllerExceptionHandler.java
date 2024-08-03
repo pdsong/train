@@ -62,7 +62,7 @@ public class ControllerExceptionHandler {
     public CommonResp exceptionHandler(BindException e) {
         CommonResp commonResp = new CommonResp();
         // 根据e找  xxx不能为空 ==> 推出来的
-        LOG.error("校验异常：{}", e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
+        LOG.error("校验异常:{}", e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
         commonResp.setSuccess(false);
         commonResp.setMessage(e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
         return commonResp;

@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Aspect
 @Component
 public class LogAspect {
+    //构造函数
     public LogAspect() {
         System.out.println("COMMMON LogAspect");
     }
@@ -37,7 +38,6 @@ public class LogAspect {
 
     @Before("controllerPointcut()")
     public void doBefore(JoinPoint joinPoint) {
-
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
