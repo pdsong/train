@@ -20,6 +20,7 @@
     </properties>
 
     <dependencies>
+<!--        member只依赖了common-->
         <dependency>
             <groupId>com.pds</groupId>
             <artifactId>common</artifactId>

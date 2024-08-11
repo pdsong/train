@@ -44,7 +44,7 @@
                 <artifactId>hutool-all</artifactId>
                 <version>5.6.3</version>
             </dependency>
-
+<!--            common由父pom进行管理  版本号-->
             <dependency>
                 <groupId>com.pds</groupId>
                 <artifactId>common</artifactId>
