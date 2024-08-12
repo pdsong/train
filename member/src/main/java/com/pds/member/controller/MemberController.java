@@ -4,6 +4,7 @@ package com.pds.member.controller;
 import com.pds.common.resp.CommonResp;
 import com.pds.member.mapper.MemberMapper;
 import com.pds.member.req.MemberRegisterReq;
+import com.pds.member.req.MemberSendCodeReq;
 import com.pds.member.service.MemberService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
@@ -32,5 +33,10 @@ public class MemberController {
     public CommonResp<Long> register(@Valid MemberRegisterReq req) {
         long registerID = memberService.register(req);
         return new CommonResp<>(registerID);  //CommResp(T content){ this.content=content }
+    }
+    @PostMapping("/sendCode")
+    public CommonResp<Long> sendCode(@Valid MemberSendCodeReq req) {
+      memberService.sendCode(req);
+        return new CommonResp<>();  //CommResp(T content){ this.content=content }
     }
 }
