@@ -1,8 +1,11 @@
 package com.pds.member.service;
 
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.RandomUtil;
 import com.pds.common.exception.BusinessException;
 import com.pds.common.exception.BusinessExceptionEnum;
@@ -10,14 +13,17 @@ import com.pds.common.util.SnowUtil;
 import com.pds.member.domain.Member;
 import com.pds.member.domain.MemberExample;
 import com.pds.member.mapper.MemberMapper;
+import com.pds.member.req.MemberLoginReq;
 import com.pds.member.req.MemberRegisterReq;
 import com.pds.member.req.MemberSendCodeReq;
+import com.pds.member.resp.MemberLoginResp;
 import jakarta.annotation.Resource;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -34,11 +40,8 @@ public class MemberService {
 
     public long register(MemberRegisterReq req) {
         String mobile = req.getMobile();
-        MemberExample memberExample = new MemberExample();
-        //构造一个条件
-        memberExample.createCriteria().andMobileEqualTo(mobile);
-        List<Member> list = memberMapper.selectByExample(memberExample);
-        if (CollUtil.isNotEmpty(list)) {
+        Member memberDB= selectByMobile(mobile);
+        if (ObjectUtil.isNotEmpty(memberDB)) {
             //   return list.get(0).getId();
             //   避免抛出改成 RuntimeException
 //            throw new RuntimeException("手机号已注册");
@@ -55,12 +58,9 @@ public class MemberService {
 
     public void sendCode(MemberSendCodeReq req){
         String mobile = req.getMobile();
-        MemberExample memberExample = new MemberExample();
-        //构造一个条件
-        memberExample.createCriteria().andMobileEqualTo(mobile);
-        List<Member> list = memberMapper.selectByExample(memberExample);
+        Member memberDB=   selectByMobile(mobile);
         //如果手机号不存在 则插入记录
-        if (CollUtil.isEmpty(list)) {
+        if (ObjectUtil.isEmpty(memberDB)) {
             Member member = new Member();
             member.setId(SnowUtil.getSnowflakeNextId());
             member.setMobile(mobile);
@@ -79,5 +79,36 @@ public class MemberService {
 
         //对接短信通道  发送短信 这里不深入了
 
+    }
+
+    public MemberLoginResp login(MemberLoginReq req) {
+        String mobile = req.getMobile();
+        String code = req.getCode();
+        Member memberDB = selectByMobile(mobile);
+
+        if (ObjectUtil.isEmpty(memberDB)) {
+            throw new BusinessException(BusinessExceptionEnum.MOBILE_NOT_EXIST);
+        }
+
+        //校验短信
+        if (!code.equals("1234")) {
+            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_CODE_ERROR);
+        }
+        // hutool 升级 5.8.10支持列表copyProperties
+        MemberLoginResp memberLoginResp = BeanUtil.copyProperties(memberDB, MemberLoginResp.class);
+        return memberLoginResp;
+
+    }
+
+    private Member selectByMobile(String mobile) {
+        MemberExample memberExample = new MemberExample();
+        //构造一个条件
+        memberExample.createCriteria().andMobileEqualTo(mobile);
+        List<Member> list = memberMapper.selectByExample(memberExample);
+        if(CollectionUtil.isEmpty(list)){
+            return null;
+        }else{
+            return list.get(0);
+        }
     }
 }
