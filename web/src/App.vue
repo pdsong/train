@@ -1,8 +1,10 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+<!--  去掉-->
+<!--  <nav>-->
+<!--    <router-link to="/">Home</router-link> |-->
+<!--    <router-link to="/about">About</router-link>-->
+<!--  </nav>-->
+<!--  不同的路由 替换到这里的东西 就是不同的页面  所有页面都有的东西可以放到这里来 -->
   <router-view/>
 </template>
 
