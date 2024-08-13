@@ -11,10 +11,7 @@ import com.pds.member.service.MemberService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
 import org.bouncycastle.cert.ocsp.Req;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/member")
@@ -37,8 +34,9 @@ public class MemberController {
         long registerID = memberService.register(req);
         return new CommonResp<>(registerID);  //CommResp(T content){ this.content=content }
     }
+    //加 @RequestBody 改成前端用json格式
     @PostMapping("/sendCode")
-    public CommonResp<Long> sendCode(@Valid MemberSendCodeReq req) {
+    public CommonResp<Long> sendCode(@Valid @RequestBody  MemberSendCodeReq req) {
       memberService.sendCode(req);
         return new CommonResp<>();  //CommResp(T content){ this.content=content }
     }
