@@ -95,7 +95,8 @@ public class MemberService {
             throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_CODE_ERROR);
         }
         // hutool 升级 5.8.10支持列表copyProperties
-        MemberLoginResp memberLoginResp = BeanUtil.copyProperties(memberDB, MemberLoginResp.class);
+        MemberLoginResp memberLoginResp =new MemberLoginResp();
+        BeanUtil.copyProperties(memberDB, memberLoginResp);
         return memberLoginResp;
 
     }
