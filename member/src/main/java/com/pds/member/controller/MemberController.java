@@ -36,9 +36,9 @@ public class MemberController {
     }
     //加 @RequestBody 改成前端用json格式
     @PostMapping("/sendCode")
-    public CommonResp<Long> sendCode(@Valid @RequestBody  MemberSendCodeReq req) {
-      memberService.sendCode(req);
-        return new CommonResp<>();  //CommResp(T content){ this.content=content }
+    public CommonResp<String> sendCode(@Valid @RequestBody  MemberSendCodeReq req) {
+       String code=memberService.sendCode(req);
+        return new CommonResp<>(code);  //CommResp(T content){ this.content=content }
     }
 
     @PostMapping("/login")

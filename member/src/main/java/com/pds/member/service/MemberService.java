@@ -56,7 +56,7 @@ public class MemberService {
     }
 
 
-    public void sendCode(MemberSendCodeReq req){
+    public String sendCode(MemberSendCodeReq req){
         String mobile = req.getMobile();
         Member memberDB=   selectByMobile(mobile);
         //如果手机号不存在 则插入记录
@@ -71,14 +71,14 @@ public class MemberService {
         }
         //生成验证码
         String code = RandomUtil.randomString(4);
-        code="1234";
+//        code="1234";
 
         LOG.info("------------>code:{}<------------------------------",code);
         //保存 短信记录表   手机号 短信吗 有效期 是否已使用  业务类型
         //                发送时间  使用时间
 
         //对接短信通道  发送短信 这里不深入了
-
+        return code;
     }
 
     public MemberLoginResp login(MemberLoginReq req) {
@@ -91,9 +91,9 @@ public class MemberService {
         }
 
         //校验短信
-        if (!code.equals("1234")) {
-            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_CODE_ERROR);
-        }
+//        if (!code.equals("1234")) {
+//            throw new BusinessException(BusinessExceptionEnum.MEMBER_MOBILE_CODE_ERROR);
+//        }
         // hutool 升级 5.8.10支持列表copyProperties
         MemberLoginResp memberLoginResp =new MemberLoginResp();
         BeanUtil.copyProperties(memberDB, memberLoginResp);
