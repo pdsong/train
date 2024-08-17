@@ -3,7 +3,7 @@
     <div class="logo"/>
     <div style="float:right;color:white">
       {{ "用户:" + member.mobile }}
-      <router-link to="/login">
+      <router-link to="/login" style="color:white">
         退出登录
       </router-link>
     </div>
