@@ -7,6 +7,7 @@ import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.jwt.JWTUtil;
 import com.pds.common.exception.BusinessException;
 import com.pds.common.exception.BusinessExceptionEnum;
 import com.pds.common.util.SnowUtil;
@@ -25,6 +26,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MemberService {
@@ -97,6 +99,9 @@ public class MemberService {
         // hutool 升级 5.8.10支持列表copyProperties
         MemberLoginResp memberLoginResp =new MemberLoginResp();
         BeanUtil.copyProperties(memberDB, memberLoginResp);
+        Map<String, Object> memberLoginMap = BeanUtil.beanToMap(memberLoginResp);
+        String token = JWTUtil.createToken(memberLoginMap, "9999".getBytes());
+        memberLoginResp.setToken(token);
         return memberLoginResp;
 
     }
