@@ -2,14 +2,12 @@ package com.pds.member.service;
 
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.CollectionUtil;
-import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.jwt.JWTUtil;
 import com.pds.common.exception.BusinessException;
 import com.pds.common.exception.BusinessExceptionEnum;
+import com.pds.common.util.JwtUtil;
 import com.pds.common.util.SnowUtil;
 import com.pds.member.domain.Member;
 import com.pds.member.domain.MemberExample;
@@ -19,12 +17,10 @@ import com.pds.member.req.MemberRegisterReq;
 import com.pds.member.req.MemberSendCodeReq;
 import com.pds.member.resp.MemberLoginResp;
 import jakarta.annotation.Resource;
-import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -100,7 +96,8 @@ public class MemberService {
         MemberLoginResp memberLoginResp =new MemberLoginResp();
         BeanUtil.copyProperties(memberDB, memberLoginResp);
         Map<String, Object> memberLoginMap = BeanUtil.beanToMap(memberLoginResp);
-        String token = JWTUtil.createToken(memberLoginMap, "9999".getBytes());
+//        String token = JWTUtil.createToken(memberLoginMap, "9999".getBytes());
+        String token = JwtUtil.createToken(memberLoginResp.getId(), memberLoginResp.getMobile());
         memberLoginResp.setToken(token);
         return memberLoginResp;
 
