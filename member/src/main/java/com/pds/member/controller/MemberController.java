@@ -20,7 +20,7 @@ public class MemberController {
     @Resource
     private MemberService memberService;
 
-    @GetMapping("/count")
+    @PostMapping("/count")
     public CommonResp<Integer> count() {
 //        return memberService.count();
         int count = memberService.count();
