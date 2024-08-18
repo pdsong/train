@@ -2,15 +2,13 @@ package com.pds.member.controller;
 
 
 import com.pds.common.resp.CommonResp;
-import com.pds.member.mapper.MemberMapper;
 import com.pds.member.req.MemberLoginReq;
 import com.pds.member.req.MemberRegisterReq;
 import com.pds.member.req.MemberSendCodeReq;
-import com.pds.member.resp.MemberLoginResp;
+import com.pds.common.resp.MemberLoginResp;
 import com.pds.member.service.MemberService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
-import org.bouncycastle.cert.ocsp.Req;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

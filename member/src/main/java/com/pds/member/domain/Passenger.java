@@ -8,14 +8,13 @@ import java.util.Date;
 public class Passenger {
 
     private Long id;
-    //notBlank不能判断Long类型
-    @NotNull(message = "会员id不可为空")
+
     private Long memberId;
-    @NotBlank(message = "名称不可为空")
+
     private String name;
-    @NotBlank(message = "身份证不可为空")
+
     private String idCard;
-    @NotBlank(message = "旅客类型不可为空")
+
     private String type;
 
     private Date createTime;

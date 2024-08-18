@@ -1,4 +1,4 @@
-package com.pds.member.resp;
+package com.pds.common.resp;
 
 public class MemberLoginResp {
     private Long id;

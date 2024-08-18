@@ -15,7 +15,7 @@ import com.pds.member.mapper.MemberMapper;
 import com.pds.member.req.MemberLoginReq;
 import com.pds.member.req.MemberRegisterReq;
 import com.pds.member.req.MemberSendCodeReq;
-import com.pds.member.resp.MemberLoginResp;
+import com.pds.common.resp.MemberLoginResp;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
