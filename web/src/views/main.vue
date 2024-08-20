@@ -3,27 +3,22 @@
     <the-header-view></the-header-view>
     <a-layout>
     <the-sider-view></the-sider-view>
-      <a-layout style="padding: 0 24px 24px">
-        <a-breadcrumb style="margin: 16px 0">
-          <a-breadcrumb-item>Home</a-breadcrumb-item>
-          <a-breadcrumb-item>List</a-breadcrumb-item>
-          <a-breadcrumb-item>App</a-breadcrumb-item>
-        </a-breadcrumb>
         <a-layout-content
             :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
         >
-          所有会员总数:{{ count }}
+<!--          所有会员总数:{{ count }}-->
+          <router-view></router-view>
         </a-layout-content>
-      </a-layout>
     </a-layout>
   </a-layout>
 </template>
 <script>
-import {defineComponent,ref} from 'vue';
+// ref
+import {defineComponent,} from 'vue';
 import TheHeaderView from "@/components/the-header.vue";
 import TheSiderView from "@/components/the-sider.vue";
-import axios from "axios";
-import {notification} from "ant-design-vue";
+// import axios from "axios";
+// import {notification} from "ant-design-vue";
 
 export default defineComponent({
   components: {
@@ -32,21 +27,21 @@ export default defineComponent({
   },
   setup() {
     // ref用来生命基本的数据类型  reactive用来生命对象或者对象数组
-    const  count=ref();
+    // const  count=ref();
 
-    axios.post("/member/member/count").then((response) => {
-      let data = response.data;
-      if (data.success) {
-        count.value=data.content;
-        notification.success({ description: '请求成功!' });
-
-      } else {
-        notification.error({ description: data.message });
-      }
-    })
+    // axios.post("/member/member/count").then((response) => {
+    //   let data = response.data;
+    //   if (data.success) {
+    //     count.value=data.content;
+    //     notification.success({ description: '请求成功!' });
+    //
+    //   } else {
+    //     notification.error({ description: data.message });
+    //   }
+    // })
 
     return {
-      count
+      // count
     }
   }
 })
