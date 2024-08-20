@@ -9,7 +9,20 @@ const routes = [
     meta:{
       //自定义变量logInRequire  下面路由登录拦截会用到  变量为true就拦截处理  没有变量或者变量为false就跳过
       logInRequire:true
-    }
+    },
+    children:[{
+      path:"welcome",
+      component:()=>import('../views/main/welcome.vue')
+    },{
+      path: "passenger",
+      component:()=>import("../views/main/passenger.vue")
+    }]
+
+  },
+    //访问根域名 =  访问/welcome
+  {
+    path: '',
+    redirect:'/welcome'
   },
   {
     path: '/login',
