@@ -8,7 +8,7 @@
       </router-link>
     </div>
     <a-menu
-        v-model:selectedKeys="selectedKeys1"
+        v-model:selectedKeys="selectedKeys"
         theme="dark"
         mode="horizontal"
         :style="{ lineHeight: '64px' }"
@@ -28,16 +28,24 @@
 </template>
 
 <script>
-import {defineComponent, ref} from 'vue';
+import {defineComponent, ref, watch} from 'vue';
 import store from "@/store";
+import router from "@/router";
 
 export default defineComponent({
   name: 'the-header-view',
   setup() {
     let member = store.state.member;
+    const selectedKeys=ref([])
+    //监视当前路由变化  例如 最新路由变化/welcome放入selectedKeys 与 <a-menu-item key一致 即可实现选中效果
+    watch(()=>router.currentRoute.value.path,(newValue)=>{
+      console.log('watch',newValue);
+      selectedKeys.value=[];
+      selectedKeys.value.push(newValue);
+    },{immediate:true})
 
     return {
-      selectedKeys1: ref(['2']),
+      selectedKeys,
       member //把member return出去
     };
   }
