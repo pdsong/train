@@ -81,7 +81,8 @@ export default defineComponent({
       pageSize: 3,
     });
     let loading = ref(false);
-    const PASSENGER_TYPE_ARRAY=[{code:"1",desc:"成人"},{code:"2",desc:"儿童"},{code:"3",desc:"学生"}];
+    // const PASSENGER_TYPE_ARRAY=[{code:"1",desc:"成人"},{code:"2",desc:"儿童"},{code:"3",desc:"学生"}];
+    const PASSENGER_TYPE_ARRAY = window.PASSENGER_TYPE_ARRAY;
     const columns = [
       {
         title: '姓名',
