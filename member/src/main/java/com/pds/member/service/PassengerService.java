@@ -28,13 +28,21 @@ public class PassengerService {
     public void save(PassengerSaveReq req){
         DateTime now=DateTime.now();
         Passenger passenger = BeanUtil.copyProperties(req, Passenger.class);
-        // SpringMvcConfig.java  MemberInterceptor.java LoginMemberContext
-        // 就为了这一句  不需要传递当前会员id 使用拦截器取 使用现场本地变量存
-        passenger.setMemberId(LoginMemberContext.getId());
-        passenger.setId(SnowUtil.getSnowflakeNextId());
-        passenger.setCreateTime(now);
-        passenger.setUpdateTime(now);
-        passengerMapper.insert(passenger);
+        if(ObjectUtil.isNull(passenger.getId())){
+            // SpringMvcConfig.java  MemberInterceptor.java LoginMemberContext
+            // 就为了这一句  不需要传递当前会员id 使用拦截器取 使用现场本地变量存
+            passenger.setMemberId(LoginMemberContext.getId());
+            passenger.setId(SnowUtil.getSnowflakeNextId());
+            passenger.setCreateTime(now);
+            passenger.setUpdateTime(now);
+            passengerMapper.insert(passenger);
+        }
+        else{
+            // 前端传什么更新什么 updateByPrimaryKey->空值更新为空   updateByPrimaryKeySelective->空值不更新
+            passenger.setUpdateTime(now);
+            passengerMapper.updateByPrimaryKey(passenger);
+        }
+
     }
 
 
