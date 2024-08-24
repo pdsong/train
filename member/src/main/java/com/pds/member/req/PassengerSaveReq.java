@@ -1,5 +1,6 @@
 package com.pds.member.req;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 
 import java.util.Date;
@@ -16,8 +17,10 @@ public class PassengerSaveReq {
     @NotBlank(message = "旅客类型不可为空")
     private String type;
 
+    //  前端得到日期值是字符串，后端接口保存按照这个格式转回日期
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",timezone = "GMT+8")
     private Date createTime;
-
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",timezone = "GMT+8")
     private Date updateTime;
 
     public Long getId() {

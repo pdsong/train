@@ -11,6 +11,7 @@
            :pagination="pagination"
            @change="handleTableChange"
            :loading="loading">
+<!--    官方文档 增加额外的列    operation跟下面的dataIndex: 'operation'是一致的 -->
     <template #bodyCell="{ column, record }">
       <template v-if="column.dataIndex === 'operation'">
         <a-space>
@@ -61,6 +62,8 @@ export default defineComponent({
   name: "passenger-view",
   setup() {
     const visible = ref(false);
+    //使用reactive() 当时但对对象进行赋值xx=yyy会失去响应性特性  xxx.id=yyy.id不受影响
+    //passenger改成了ref  需要对passenger.vlaue赋值
     let passenger = ref({
       id: undefined,
       memberId: undefined,
@@ -107,7 +110,8 @@ export default defineComponent({
     };
 
     const onEdit = (record) => {
-      passenger.value = window.Tool.copy(record);
+      // passenger.value = window.Tool.copy(record);
+      passenger.value = record;
       visible.value = true;
     };
 
@@ -126,6 +130,7 @@ export default defineComponent({
       });
     };
 
+    //passenger改成了ref  需要对passenger.vlaue赋值
     const handleOk = () => {
       axios.post("/member/passenger/save", passenger.value).then((response) => {
         let data = response.data;
