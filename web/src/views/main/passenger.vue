@@ -105,13 +105,13 @@ export default defineComponent({
     ];
 
     const onAdd = () => {
-      passenger.value = {};
+      passenger.value = {};//清空表单数据
       visible.value = true;
     };
 
     const onEdit = (record) => {
       // passenger.value = window.Tool.copy(record);
-      passenger.value = record;
+      passenger.value = JSON.parse(JSON.stringify(record));
       visible.value = true;
     };
 
