@@ -1,11 +1,12 @@
 <template>
   <a-layout-header class="header">
-    <div class="logo"/>
-    <div style="float:right;color:white">
-      {{ "用户:" + member.mobile }}
-      <router-link to="/login" style="color:white">
-        退出登录
+    <div class="logo">
+      <router-link to="/welcome">
+        控制台
       </router-link>
+    </div>
+    <div style="float:right;color:white">
+      控制台管理
     </div>
     <a-menu
         v-model:selectedKeys="selectedKeys"
@@ -18,9 +19,9 @@
           <coffee-outlined/>欢迎
         </router-link>
       </a-menu-item>
-      <a-menu-item key="/passenger">
-        <router-link to="/passenger">
-          <coffee-outlined/>乘车人管理
+      <a-menu-item key="/about">
+        <router-link to="/about">
+          <coffee-outlined/>关于
         </router-link>
       </a-menu-item>
     </a-menu>
@@ -29,13 +30,13 @@
 
 <script>
 import {defineComponent, ref, watch} from 'vue';
-import store from "@/store";
+// import store from "@/store";
 import router from "@/router";
 
 export default defineComponent({
   name: 'the-header-view',
   setup() {
-    let member = store.state.member;
+    // let member = store.state.member;
     const selectedKeys=ref([])
     //监视当前路由变化  例如 最新路由变化/welcome放入selectedKeys 与 <a-menu-item key一致 即可实现选中效果
     watch(()=>router.currentRoute.value.path,(newValue)=>{
@@ -46,7 +47,6 @@ export default defineComponent({
 
     return {
       selectedKeys,
-      member //把member return出去
     };
   }
 });
@@ -54,5 +54,11 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.logo {
+  float: left;
+  height: 31px;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+}
 </style>

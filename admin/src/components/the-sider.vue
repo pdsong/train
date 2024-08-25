@@ -11,9 +11,9 @@
           <coffee-outlined/>欢迎
         </router-link>
       </a-menu-item>
-      <a-menu-item key="/passenger">
-        <router-link to="/passenger">
-          <coffee-outlined/>乘车人管理
+      <a-menu-item key="/about">
+        <router-link to="/about">
+          <coffee-outlined/>关于
         </router-link>
       </a-menu-item>
 <!--      原来是子menu里a-menu-item形式 现在改成了直接a-menu-item-->
