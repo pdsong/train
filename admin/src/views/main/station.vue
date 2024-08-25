@@ -43,15 +43,16 @@
 </template>
 
 <script>
-import defineComponent, {ref} from 'vue'
-import notification from 'ant-design-vue'
+import {defineComponent, onMounted, ref, watch} from 'vue'
+import {notification} from 'ant-design-vue'
 import axios  from "axios";
+import {pinyin} from "pinyin-pro";
 // import pinyin from 'pinyin-pro'
 
 export  default  defineComponent({
   name:"station-view",
   setup(){
-    const visible=false
+    const visible=ref(false)
     let station=ref({
       id:'',
       name:'',
@@ -92,7 +93,8 @@ export  default  defineComponent({
     ];
 
     watch(() => station.value.name, ()=>{
-      if (Tool.isNotEmpty(station.value.name)) {
+      // if (Tool.isNotEmpty(station.value.name)) {
+      if (station.value.name) {
         station.value.namePinyin = pinyin(station.value.name, { toneType: 'none'}).replaceAll(" ", "");
         station.value.namePy = pinyin(station.value.name, { pattern: 'first', toneType: 'none'}).replaceAll(" ", "");
       } else {
@@ -108,7 +110,7 @@ export  default  defineComponent({
     };
 
     const onEdit = (record) => {
-      station.value = window.Tool.copy(record);
+      station.value =  JSON.parse(JSON.stringify(record));
       visible.value = true;
     };
 

@@ -10,11 +10,9 @@ const routes = [{
     path: 'about',
     component: () => import('../views/main/about.vue'),
   }, {
-    path: 'base/',
-    children: [{
       path: 'station',
-      component: () => import('../views/main/base/station.vue'),
-    }, ]
+      component: () => import('../views/main/station.vue'),
+
   },
   //
   //   {
