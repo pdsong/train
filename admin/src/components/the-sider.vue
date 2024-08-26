@@ -21,6 +21,11 @@
           <coffee-outlined/>车站管理
         </router-link>
       </a-menu-item>
+      <a-menu-item key="/train">
+        <router-link to="/train">
+          <coffee-outlined/>火车管理
+        </router-link>
+      </a-menu-item>
 <!--      原来是子menu里a-menu-item形式 现在改成了直接a-menu-item-->
 <!--      <a-sub-menu key="sub1">-->
 <!--        <template #title>-->
