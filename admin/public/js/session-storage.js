@@ -1,3 +1,5 @@
+SESSION_ALL_TRAIN = "SESSION_ALL_TRAIN";
+
 SessionStorage = {
     get: function (key) {
         //h5提供的缓存 原生只支持字符串 所以添加了set remove clearall封装
