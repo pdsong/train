@@ -11,14 +11,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@RestController
 @RequestMapping("/admin/job")
 public class JobController {
 
@@ -28,6 +31,14 @@ public class JobController {
     private SchedulerFactoryBean schedulerFactoryBean;
 
 
+    @RequestMapping(value = "/run")
+    public CommonResp<Object> run(@RequestBody CronJobReq cronJobReq) throws SchedulerException {
+        String jobClassName = cronJobReq.getName();
+        String jobGroupName = cronJobReq.getGroup();
+        LOG.info("手动执行任务开始：{}, {}", jobClassName, jobGroupName);
+        schedulerFactoryBean.getScheduler().triggerJob(JobKey.jobKey(jobClassName, jobGroupName));
+        return new CommonResp<>();
+    }
     @RequestMapping("/add")
     public CommonResp save(@RequestBody CronJobReq cronJobReq) throws ClassNotFoundException {
         String jobClassName = cronJobReq.getName();

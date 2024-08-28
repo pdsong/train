@@ -1,0 +1,162 @@
+2024-08-28 00:44:44.367 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-28 00:44:47.229 INFO  com.pds.gateway.config.GatewayApplication         :51   [32m                  [0;39m Starting GatewayApplication using Java 17.0.3 with PID 28524 (D:\project\java\train\gateway\target\classes started by linyu in D:\project\java\train)
+2024-08-28 00:44:47.230 INFO  com.pds.gateway.config.GatewayApplication         :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-08-28 00:44:48.144 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=77ef1822-a206-3c33-8f57-7beaec78ffa4
+2024-08-28 00:44:49.185 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [After]
+2024-08-28 00:44:49.185 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Before]
+2024-08-28 00:44:49.186 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Between]
+2024-08-28 00:44:49.186 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Cookie]
+2024-08-28 00:44:49.186 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Header]
+2024-08-28 00:44:49.186 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Host]
+2024-08-28 00:44:49.186 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Method]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Path]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Query]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [ReadBody]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Weight]
+2024-08-28 00:44:49.193 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-28 00:44:49.277 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-08-28 00:44:49.580 INFO  o.s.boot.web.embedded.netty.NettyWebServer        :111  [32m                  [0;39m Netty started on port 8000
+2024-08-28 00:44:49.981 INFO  com.pds.gateway.config.GatewayApplication         :57   [32m                  [0;39m Started GatewayApplication in 3.064 seconds (process running for 95471.027)
+2024-08-28 00:44:49.984 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2024-08-28 00:44:49.985 INFO  com.pds.gateway.config.GatewayApplication         :19   [32m                  [0;39m 启动成功！！
+2024-08-28 00:44:49.985 INFO  com.pds.gateway.config.GatewayApplication         :20   [32m                  [0;39m 网关地址: 	http://127.0.0.1:8000
+2024-08-28 00:45:40.448 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-28 00:45:42.960 INFO  com.pds.gateway.config.GatewayApplication         :51   [32m                  [0;39m Starting GatewayApplication using Java 17.0.3 with PID 28524 (D:\project\java\train\gateway\target\classes started by linyu in D:\project\java\train)
+2024-08-28 00:45:42.960 INFO  com.pds.gateway.config.GatewayApplication         :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-08-28 00:45:43.303 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=77ef1822-a206-3c33-8f57-7beaec78ffa4
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [After]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Before]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Between]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Cookie]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Header]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Host]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Method]
+2024-08-28 00:45:43.663 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Path]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Query]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [ReadBody]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Weight]
+2024-08-28 00:45:43.664 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-28 00:45:43.744 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-08-28 00:45:43.929 INFO  o.s.boot.web.embedded.netty.NettyWebServer        :111  [32m                  [0;39m Netty started on port 8000
+2024-08-28 00:45:44.214 INFO  com.pds.gateway.config.GatewayApplication         :57   [32m                  [0;39m Started GatewayApplication in 1.567 seconds (process running for 95525.26)
+2024-08-28 00:45:44.215 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2024-08-28 00:45:44.215 INFO  com.pds.gateway.config.GatewayApplication         :19   [32m                  [0;39m 启动成功！！
+2024-08-28 00:45:44.216 INFO  com.pds.gateway.config.GatewayApplication         :20   [32m                  [0;39m 网关地址: 	http://127.0.0.1:8000
+2024-08-28 00:55:19.253 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-28 00:55:21.694 INFO  com.pds.gateway.config.GatewayApplication         :51   [32m                  [0;39m Starting GatewayApplication using Java 17.0.3 with PID 28524 (D:\project\java\train\gateway\target\classes started by linyu in D:\project\java\train)
+2024-08-28 00:55:21.694 INFO  com.pds.gateway.config.GatewayApplication         :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-08-28 00:55:21.882 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=77ef1822-a206-3c33-8f57-7beaec78ffa4
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [After]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Before]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Between]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Cookie]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Header]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Host]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Method]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Path]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Query]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [ReadBody]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Weight]
+2024-08-28 00:55:22.102 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-28 00:55:22.151 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-08-28 00:55:22.332 INFO  o.s.boot.web.embedded.netty.NettyWebServer        :111  [32m                  [0;39m Netty started on port 8000
+2024-08-28 00:55:22.685 INFO  com.pds.gateway.config.GatewayApplication         :57   [32m                  [0;39m Started GatewayApplication in 1.253 seconds (process running for 96103.731)
+2024-08-28 00:55:22.687 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2024-08-28 00:55:22.688 INFO  com.pds.gateway.config.GatewayApplication         :19   [32m                  [0;39m 启动成功！！
+2024-08-28 00:55:22.689 INFO  com.pds.gateway.config.GatewayApplication         :20   [32m                  [0;39m 网关地址: 	http://127.0.0.1:8000
+2024-08-28 00:55:28.298 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.0.Final
+2024-08-28 00:55:28.343 INFO  com.pds.gateway.config.GatewayApplication         :51   [32m                  [0;39m Starting GatewayApplication using Java 17.0.3 with PID 51488 (D:\project\java\train\gateway\target\classes started by linyu in D:\project\java\train)
+2024-08-28 00:55:28.345 INFO  com.pds.gateway.config.GatewayApplication         :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-08-28 00:55:28.397 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-28 00:55:28.398 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-28 00:55:29.439 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=77ef1822-a206-3c33-8f57-7beaec78ffa4
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [After]
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Before]
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Between]
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Cookie]
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Header]
+2024-08-28 00:55:30.489 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Host]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Method]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Path]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Query]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [ReadBody]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-28 00:55:30.490 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Weight]
+2024-08-28 00:55:30.491 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-28 00:55:30.701 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-08-28 00:55:31.199 INFO  o.s.boot.web.embedded.netty.NettyWebServer        :111  [32m                  [0;39m Netty started on port 8000
+2024-08-28 00:55:31.641 INFO  com.pds.gateway.config.GatewayApplication         :57   [32m                  [0;39m Started GatewayApplication in 3.96 seconds (process running for 5.046)
+2024-08-28 00:55:31.646 INFO  com.pds.gateway.config.GatewayApplication         :19   [32m                  [0;39m 启动成功！！
+2024-08-28 00:55:31.647 INFO  com.pds.gateway.config.GatewayApplication         :20   [32m                  [0;39m 网关地址: 	http://127.0.0.1:8000
+2024-08-28 00:56:09.824 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:56:09.825 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:56:09.825 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:56:09.835 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:56:09 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 66
+2024-08-28 00:56:23.652 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:56:23.653 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:56:23.653 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:56:23.654 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:56:23 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 3
+2024-08-28 00:56:25.493 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:56:25.493 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:56:25.493 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:56:25.494 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:56:25 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 2
+2024-08-28 00:56:27.561 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:56:27.562 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:56:27.563 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:56:27.565 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:56:27 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 5
+2024-08-28 00:56:40.345 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/ok
+2024-08-28 00:56:40.346 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:56:40.347 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:56:40.348 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:56:40 +0800] "GET /batch/ok HTTP/1.1" 401 0 4
+2024-08-28 00:57:10.927 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:57:10.928 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:57:10.928 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:57:10.929 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:57:10 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 3
+2024-08-28 00:57:34.083 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.0.Final
+2024-08-28 00:57:34.130 INFO  com.pds.gateway.config.GatewayApplication         :51   [32m                  [0;39m Starting GatewayApplication using Java 17.0.3 with PID 20300 (D:\project\java\train\gateway\target\classes started by linyu in D:\project\java\train)
+2024-08-28 00:57:34.131 INFO  com.pds.gateway.config.GatewayApplication         :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-08-28 00:57:34.189 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-28 00:57:34.189 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :250  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-28 00:57:34.879 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=77ef1822-a206-3c33-8f57-7beaec78ffa4
+2024-08-28 00:57:36.234 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [After]
+2024-08-28 00:57:36.234 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Before]
+2024-08-28 00:57:36.235 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Between]
+2024-08-28 00:57:36.235 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Cookie]
+2024-08-28 00:57:36.235 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Header]
+2024-08-28 00:57:36.235 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Host]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Method]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Path]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Query]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [ReadBody]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-28 00:57:36.236 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-28 00:57:36.237 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [Weight]
+2024-08-28 00:57:36.237 INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator   :88   [32m                  [0;39m Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-28 00:57:36.473 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-08-28 00:57:36.958 INFO  o.s.boot.web.embedded.netty.NettyWebServer        :111  [32m                  [0;39m Netty started on port 8000
+2024-08-28 00:57:37.409 INFO  com.pds.gateway.config.GatewayApplication         :57   [32m                  [0;39m Started GatewayApplication in 3.971 seconds (process running for 4.693)
+2024-08-28 00:57:37.415 INFO  com.pds.gateway.config.GatewayApplication         :19   [32m                  [0;39m 启动成功！！
+2024-08-28 00:57:37.416 INFO  com.pds.gateway.config.GatewayApplication         :20   [32m                  [0;39m 网关地址: 	http://127.0.0.1:8000
+2024-08-28 00:57:49.508 INFO  com.pds.gateway.config.LoginMemberFilter          :29   [32m                  [0;39m 需要验证登录:/batch/batch/ok
+2024-08-28 00:57:49.508 INFO  com.pds.gateway.config.LoginMemberFilter          :33   [32m                  [0;39m 会员登录验证开始:token:null
+2024-08-28 00:57:49.509 INFO  com.pds.gateway.config.LoginMemberFilter          :35   [32m                  [0;39m token为空,请求被拦截!
+2024-08-28 00:57:49.517 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:00:57:49 +0800] "GET /batch/batch/ok HTTP/1.1" 401 0 46
+2024-08-28 23:47:17.075 INFO  com.pds.gateway.config.LoginMemberFilter          :26   [32m                  [0;39m 不需要验证登录:/business/admin/train-station/query-list
+2024-08-28 23:47:17.081 INFO  com.pds.gateway.config.Test1Filter                :18   [32m                  [0;39m Test1Filter->
+2024-08-28 23:47:17.082 INFO  com.pds.gateway.config.Test2Filter                :18   [32m                  [0;39m Test2Filter->
+2024-08-28 23:47:17.879 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:23:47:16 +0800] "GET /business/admin/train-station/query-list?page=1&size=10 HTTP/1.1" 200 538 880
+2024-08-28 23:48:59.551 INFO  com.pds.gateway.config.LoginMemberFilter          :26   [32m                  [0;39m 不需要验证登录:/business/admin/train-station/query-list
+2024-08-28 23:48:59.552 INFO  com.pds.gateway.config.Test1Filter                :18   [32m                  [0;39m Test1Filter->
+2024-08-28 23:48:59.552 INFO  com.pds.gateway.config.Test2Filter                :18   [32m                  [0;39m Test2Filter->
+2024-08-28 23:48:59.579 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:23:48:59 +0800] "GET /business/admin/train-station/query-list?page=1&size=10 HTTP/1.1" 200 538 29
+2024-08-28 23:51:13.673 INFO  com.pds.gateway.config.LoginMemberFilter          :26   [32m                  [0;39m 不需要验证登录:/business/admin/train-station/query-list
+2024-08-28 23:51:13.674 INFO  com.pds.gateway.config.Test1Filter                :18   [32m                  [0;39m Test1Filter->
+2024-08-28 23:51:13.674 INFO  com.pds.gateway.config.Test2Filter                :18   [32m                  [0;39m Test2Filter->
+2024-08-28 23:51:13.714 INFO  reactor.netty.http.server.AccessLog               :279  [32m                  [0;39m 0:0:0:0:0:0:0:1 - - [28/8月/2024:23:51:13 +0800] "GET /business/admin/train-station/query-list?page=1&size=10 HTTP/1.1" 200 538 43

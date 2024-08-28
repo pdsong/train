@@ -21,6 +21,11 @@ const routes = [{
       path: 'train-station',
       component: () => import('../views/main/train-station.vue'),
 
+  },{
+      path: 'batch/job',
+      name: 'batch/job',
+      component: () => import('../views/main/job.vue'),
+
   },
   //
   //   {
