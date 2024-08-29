@@ -27,7 +27,7 @@ public class StationController {
     @GetMapping("/ok")
     public CommonResp<String> ok() {
         List<StationQueryResp> list = stationService.queryAll();
-        return new CommonResp<>("OK");
+        return new CommonResp<>("Business is OK");
     }
 
 
