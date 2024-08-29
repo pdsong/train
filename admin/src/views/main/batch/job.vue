@@ -240,6 +240,7 @@ export default defineComponent({
 
     /**
      * 手动执行
+     * 任务手工补偿功能
      */
     const handleRun = (record) => {
       axios.post('/batch/admin/job/run', record).then((response) => {
