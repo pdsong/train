@@ -16,26 +16,47 @@
           <coffee-outlined/>关于
         </router-link>
       </a-menu-item>
-      <a-menu-item key="/batch/job">
-        <router-link to="/batch/job">
-          <coffee-outlined/>任务管理
-        </router-link>
-      </a-menu-item>
-      <a-menu-item key="/station">
-        <router-link to="/station">
-          <coffee-outlined/>车站管理
-        </router-link>
-      </a-menu-item>
-      <a-menu-item key="/train">
-        <router-link to="/train">
-          <coffee-outlined/>火车管理
-        </router-link>
-      </a-menu-item>
-      <a-menu-item key="/train-station">
-        <router-link to="/train-station">
-          <coffee-outlined/>火车车站管理
-        </router-link>
-      </a-menu-item>
+      <a-sub-menu key="batch">
+        <template #title>
+          <span>
+         <UnorderedListOutlined />
+            跑批管理
+          </span>
+        </template>
+          <a-menu-item key="/batch/job">
+            <router-link to="/batch/job">
+              <coffee-outlined/>任务管理
+            </router-link>
+          </a-menu-item>
+
+      </a-sub-menu>
+
+      <a-sub-menu key="base">
+        <template #title>
+          <span>
+            <UnorderedListOutlined />
+            基础数据
+          </span>
+        </template>
+        <a-menu-item key="/base/station">
+          <router-link to="/base/station">
+            <coffee-outlined/>车站管理
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="/base/train">
+          <router-link to="/base/train">
+            <coffee-outlined/>火车管理
+          </router-link>
+        </a-menu-item>
+        <a-menu-item key="/base/train-station">
+          <router-link to="/base/train-station">
+            <coffee-outlined/>火车车站管理
+          </router-link>
+        </a-menu-item>
+
+      </a-sub-menu>
+
+
 <!--      原来是子menu里a-menu-item形式 现在改成了直接a-menu-item-->
 <!--      <a-sub-menu key="sub1">-->
 <!--        <template #title>-->
@@ -94,7 +115,7 @@ export default defineComponent({
 
     return {
       selectedKeys ,
-      openKeys: ref(['sub1'])
+      openKeys: ref(['batch','base'])
     };
   }
 });
