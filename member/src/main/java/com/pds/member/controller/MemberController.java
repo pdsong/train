@@ -9,6 +9,7 @@ import com.pds.common.resp.MemberLoginResp;
 import com.pds.member.service.MemberService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -44,4 +45,16 @@ public class MemberController {
         MemberLoginResp loginResp = memberService.login(req);
         return new CommonResp<>(loginResp);  //CommResp(T content){ this.content=content }
     }
+
+
+   @Value("${test.nacos}")
+   private String testNacos;
+
+    //输出hello Member
+    @GetMapping("properGet")
+    public String helloGetProperties(){
+        return String.format("hello %s",testNacos);
+    }
+
+
 }
