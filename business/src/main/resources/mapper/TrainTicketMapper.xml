@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pds.business.mapper.TrainTicketMapper">
+  <resultMap id="BaseResultMap" type="com.pds.business.domain.TrainTicket">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="train_id" jdbcType="BIGINT" property="trainId" />
+    <result column="ticket_num" jdbcType="INTEGER" property="ticketNum" />
+    <result column="sale_flag" jdbcType="INTEGER" property="saleFlag" />
+    <result column="sale_date" jdbcType="TIMESTAMP" property="saleDate" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, train_id, ticket_num, sale_flag, sale_date
+  </sql>
+  <select id="selectByExample" parameterType="com.pds.business.domain.TrainTicketExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from train_ticket
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from train_ticket
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from train_ticket
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pds.business.domain.TrainTicketExample">
+    delete from train_ticket
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pds.business.domain.TrainTicket">
+    insert into train_ticket (id, train_id, ticket_num, 
+      sale_flag, sale_date)
+    values (#{id,jdbcType=BIGINT}, #{trainId,jdbcType=BIGINT}, #{ticketNum,jdbcType=INTEGER}, 
+      #{saleFlag,jdbcType=INTEGER}, #{saleDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pds.business.domain.TrainTicket">
+    insert into train_ticket
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="trainId != null">
+        train_id,
+      </if>
+      <if test="ticketNum != null">
+        ticket_num,
+      </if>
+      <if test="saleFlag != null">
+        sale_flag,
+      </if>
+      <if test="saleDate != null">
+        sale_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="trainId != null">
+        #{trainId,jdbcType=BIGINT},
+      </if>
+      <if test="ticketNum != null">
+        #{ticketNum,jdbcType=INTEGER},
+      </if>
+      <if test="saleFlag != null">
+        #{saleFlag,jdbcType=INTEGER},
+      </if>
+      <if test="saleDate != null">
+        #{saleDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pds.business.domain.TrainTicketExample" resultType="java.lang.Long">
+    select count(*) from train_ticket
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+
+  <select id="queryPageByDate" parameterType="map" resultType="com.pds.business.resp.TrainTicketQueryResp">
+    select tt.id as id,t.id as trainId,tt.sale_flag as saleFlag,sale_date as saleDate,t.code as code,t.start as start,t.end as end,t.type as type,count(tt.ticket_num) as ticketRestNum,
+    start_time as startTime,end_time as endTime
+    from train_ticket tt join train t on tt.train_id=t.id
+    WHERE t.id IN
+    <foreach item="id" collection="idList" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+    AND tt.sale_date BETWEEN #{start} AND #{end}
+    and sale_flag=0
+    group by tt.train_id
+  </select>
+
+
+
+  <update id="updateByExampleSelective" parameterType="map">
+    update train_ticket
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.trainId != null">
+        train_id = #{record.trainId,jdbcType=BIGINT},
+      </if>
+      <if test="record.ticketNum != null">
+        ticket_num = #{record.ticketNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.saleFlag != null">
+        sale_flag = #{record.saleFlag,jdbcType=INTEGER},
+      </if>
+      <if test="record.saleDate != null">
+        sale_date = #{record.saleDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update train_ticket
+    set id = #{record.id,jdbcType=BIGINT},
+      train_id = #{record.trainId,jdbcType=BIGINT},
+      ticket_num = #{record.ticketNum,jdbcType=INTEGER},
+      sale_flag = #{record.saleFlag,jdbcType=INTEGER},
+      sale_date = #{record.saleDate,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pds.business.domain.TrainTicket">
+    update train_ticket
+    <set>
+      <if test="trainId != null">
+        train_id = #{trainId,jdbcType=BIGINT},
+      </if>
+      <if test="ticketNum != null">
+        ticket_num = #{ticketNum,jdbcType=INTEGER},
+      </if>
+      <if test="saleFlag != null">
+        sale_flag = #{saleFlag,jdbcType=INTEGER},
+      </if>
+      <if test="saleDate != null">
+        sale_date = #{saleDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pds.business.domain.TrainTicket">
+    update train_ticket
+    set train_id = #{trainId,jdbcType=BIGINT},
+      ticket_num = #{ticketNum,jdbcType=INTEGER},
+      sale_flag = #{saleFlag,jdbcType=INTEGER},
+      sale_date = #{saleDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

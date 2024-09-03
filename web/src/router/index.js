@@ -16,7 +16,11 @@ const routes = [
     },{
       path: "passenger",
       component:()=>import("../views/main/passenger.vue")
-    }]
+    },
+      {
+        path: '/trainByTicket',
+        component: () => import('../views/main/trainByTicket.vue')
+      }]
 
   },
     //访问根域名 =  访问/welcome

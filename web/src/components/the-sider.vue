@@ -16,6 +16,11 @@
           <coffee-outlined/>乘车人管理
         </router-link>
       </a-menu-item>
+      <a-menu-item key="/trainByTicket">
+        <router-link to="/trainByTicket">
+          <coffee-outlined/>车站购票
+        </router-link>
+      </a-menu-item>
 <!--      原来是子menu里a-menu-item形式 现在改成了直接a-menu-item-->
 <!--      <a-sub-menu key="sub1">-->
 <!--        <template #title>-->
@@ -62,7 +67,7 @@ import {defineComponent, ref, watch} from 'vue';
 import router from "@/router";
 
 export default defineComponent({
-  name: 'the-sider-view',
+  name: 'trainByTicket',
   setup() {
     const selectedKeys=ref([])
     //监视当前路由变化  例如 最新路由变化/welcome放入selectedKeys 与 <a-menu-item key一致 即可实现选中效果
