@@ -29,5 +29,4 @@ public class TestController {
     public CommonResp<String> ok() {
         return new CommonResp<>("OK");
     }
-
 }
