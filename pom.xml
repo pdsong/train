@@ -10,6 +10,7 @@
         <module>generator</module>
         <module>business</module>
         <module>batch</module>
+        <module>News</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

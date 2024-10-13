@@ -11,6 +11,11 @@
           <coffee-outlined/>欢迎
         </router-link>
       </a-menu-item>
+      <a-menu-item key="/hackNews">
+        <router-link to="/hackNews">
+          <coffee-outlined/>黑客新闻
+        </router-link>
+      </a-menu-item>
       <a-menu-item key="/passenger">
         <router-link to="/passenger">
           <coffee-outlined/>乘车人管理

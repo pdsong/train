@@ -14,6 +14,9 @@ const routes = [
       path:"welcome",
       component:()=>import('../views/main/welcome.vue')
     },{
+      path:"hackNews",
+      component:()=>import('../views/main/hackNews.vue')
+    },{
       path: "passenger",
       component:()=>import("../views/main/passenger.vue")
     },
